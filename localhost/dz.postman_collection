@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "a5ad7448-8223-41e8-9dd9-e03f0b29b711",
+		"name": "posts Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "lumen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/ws-api-lumen-master/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ws-api-lumen-master",
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/ws-api-lumen-master/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ws-api-lumen-master",
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "post_title",
+							"value": "Заголовок 2",
+							"type": "text"
+						},
+						{
+							"key": "post_info",
+							"value": "информация",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/ws-api-lumen-master/api/post/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ws-api-lumen-master",
+						"api",
+						"post",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post edit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "post_title",
+							"value": "Заголовок 4",
+							"type": "text"
+						},
+						{
+							"key": "post_info",
+							"value": "информация",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/ws-api-lumen-master/api/post/1/edit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ws-api-lumen-master",
+						"api",
+						"post",
+						"1",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/ws-api-lumen-master/api/post/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ws-api-lumen-master",
+						"api",
+						"post",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post id delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/ws-api-lumen-master/api/post/1/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ws-api-lumen-master",
+						"api",
+						"post",
+						"1",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comment add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "comment_text",
+							"value": "Комментарий",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/ws-api-lumen-master/api/post/1/comment/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ws-api-lumen-master",
+						"api",
+						"post",
+						"1",
+						"comment",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "comment id delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost/ws-api-lumen-master/api/comment/1/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ws-api-lumen-master",
+						"api",
+						"comment",
+						"1",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
