@@ -29,4 +29,5 @@ $router->group(['prefix' => 'api'], function () use ($router) {
 	$router->delete('comment/{comment_id}/delete', 'CommentController@delete');
 
 	$router->get('file/{key}', 'FileController@show');
+
 });

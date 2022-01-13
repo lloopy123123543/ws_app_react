@@ -21,7 +21,7 @@ function PostShow(props) {
         }
     }, [isUpdate]);
 
-    const commentAdd = async () => {}
+    const commentAdd = async (post_id) => {}
 
     const postUpdate = () => {
         setIsUpdate(!isUpdate);
@@ -32,8 +32,10 @@ function PostShow(props) {
             <h1><button onClick={() => postUpdate()}>Обновить</button></h1>
             {post && (
                 <React.Fragment>
+            <h1>{post.comments.comment_text}</h1>
             <h1>{post.post_title}</h1>
             <h1>{post.post_info}</h1>
+            
             </React.Fragment>
             )}
 

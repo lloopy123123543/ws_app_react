@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import './PostCreate.css';
 import Post from '../post/Post';
 
 function PostCreate(props) {
@@ -77,18 +78,19 @@ function PostCreate(props) {
 
     return(
         <React.Fragment>
+        <div className='Kostil'></div>
 
-            <div>
+            <div className='Tite'>
                 <label>Заголовок</label>
-                <input ref={inputPostTitle} type="text" onChange={() => addDisable()}/>
+                /<input ref={inputPostTitle} type="text" onChange={() => addDisable()}/>
             </div>
-            <div>
+            <div className='Tite'>
                 <label>Описание</label>
-                <input ref={inputPostInfo} type="text" onChange={() => addDisable()}/>
+                /<input ref={inputPostInfo} type="text" onChange={() => addDisable()}/>
             </div>
-            <div>
+            <div className='Tite'>
                 <label>Картинка</label>
-                <input ref={inputPostImage} type="file" multiple="multiple" accept="image/png, image/gif, image/jpeg"/>
+               /<input ref={inputPostImage} type="file" multiple="multiple" accept="image/png, image/gif, image/jpeg"/>
             </div>
             <div>
                 <button onClick={() => postAdd()}

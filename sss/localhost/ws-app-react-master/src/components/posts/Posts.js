@@ -3,12 +3,14 @@ import React, { useState, useEffect } from 'react';
 import Post from '../post/Post';
 import PostCreate from '../post-create/PostCreate';
 import PostShow from '../post-show/PostShow';
+// import PostDelete from '../post-delete/PostDelete';
 
 
 function Posts() {
     const [posts, setPosts] = useState(null);
     const [isUpdate, setIsUpdate] = useState(false);
     const [routerComponent, setRouterComponent] = useState('posts');
+    const [routerDelete, setRouterDelete] = useState('posts');
     const [postId, setPostId] = useState(null);
 
     useEffect(() => {
@@ -44,9 +46,10 @@ function Posts() {
                 <React.Fragment>
 
                     <div className='Postik'>Сейчас мы наблюдаем все добавленные посты</div>
+                    
                     <div className='Add'>
-                        <a style={{color: 'red'}} onClick={() => setRouterComponent('postCreate')}> Добавить новый </a> 
-                        <button onClick={() => postUpdate()}>Обновить</button>
+                        <a style={{color: 'white'}} onClick={() => setRouterComponent('postCreate')}> Добавить новый </a> 
+                        
 
                     </div>
                     
@@ -59,8 +62,9 @@ function Posts() {
             )}
             {routerComponent === 'postCreate' && (
                 <React.Fragment>
+
                 <div className='Addd'>
-                    Сейчас мы на этапе создания поста! <a style={{color: 'blue'}} onClick={() => setRouterComponent('posts')}>
+                    Сейчас мы на этапе создания поста! <a style={{color: 'white'}} onClick={() => setRouterComponent('posts')}>
                     Все посты</a></div>
                     <PostCreate isCreate={() => setRouterComponent('posts')}/>
                 </React.Fragment>
@@ -69,13 +73,24 @@ function Posts() {
                 <React.Fragment>
                 <div className='Add'>
                     <a style={{color: 'white'}} onClick={() => setRouterComponent('posts')}>Вернуться назад</a></div>
-                    <div className='blanck'>{postId && (<PostShow id={postId}/>)}
-                    
+                    <div className='blanck'>{postId && (<PostShow id={postId}/>)}</div>
 
-                    </div>
+                    
                     
                     
                 </React.Fragment>
+            )}
+            {routerComponent === 'postDelete' &&(
+                <React.Fragment>
+                <div className='Delete'>
+                    <a style={{color: 'white'}} onClick={() => setRouterDelete('posts')}>Check</a></div>
+
+
+
+                </React.Fragment>
+
+
+                
             )}
         </React.Fragment>
     );
